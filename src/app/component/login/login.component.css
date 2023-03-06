@@ -1,0 +1,111 @@
+.loginView{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 211, 173);
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    max-height: 100%;
+    width: 80%;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    animation: show 0.5s ease-in-out;
+}
+
+.loginContainer > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: calc(40% - 140px);
+    position: absolute;
+    right: 0;
+    padding: 0 70px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.loginForm > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.loginForm > div > label{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loginForm > div > input{
+    height: 40px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loginForm > div > button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 211, 173);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.loginForm > div > button:hover{
+    background-color: rgb(0, 191, 153);
+    scale: 1.1;
+}
+
+.loginForm > a{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 211, 173);
+    text-decoration: none;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.loginForm > a:hover{
+    text-decoration: underline;
+}
+
+@keyframes show {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 80%;
+    }
+}

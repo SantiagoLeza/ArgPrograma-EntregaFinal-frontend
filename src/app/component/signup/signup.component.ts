@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ export class SignupComponent {
   pass = {first: "", last: ""};
   passValid = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.form = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -20,16 +21,24 @@ export class SignupComponent {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       country: ['', ],
-      city: ['', ]
+      city: ['', ],
+      urlImage: ['', ],
     });
 
     this.form.addValidators(this.checkPassword);
   }
 
   onSubmit(event: Event){
-    
     if(this.form.valid){
-      
+      this.authService.signup(
+        this.form.get('email')?.value,
+        this.form.get('password')?.value,
+        this.form.get('firstName')?.value,
+        this.form.get('lastName')?.value,
+        this.form.get('country')?.value,
+        this.form.get('city')?.value,
+        this.form.get('urlImage')?.value
+      );
     }
     else{
       this.form.markAllAsTouched();
@@ -40,8 +49,6 @@ export class SignupComponent {
     const password = this.form.get('password')?.value;
     const confirmPassword = this.form.get('confirmPassword')?.value;
 
-    console.log(password);
-    console.log(confirmPassword);
     if (password === confirmPassword) {
       this.passValid = true;
     }

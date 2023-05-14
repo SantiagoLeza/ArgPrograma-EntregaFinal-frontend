@@ -39,6 +39,10 @@
                     <input type="text" id="city" name="city" formControlName="city">
                 </div>
             </div>
+            <div class="col">
+                <label for="urlImage">Photo</label>
+                <input type="url" id="urlImage" name="urlImage" formControlName="urlImage">
+            </div>
             <button type="submit" [disabled]="!form.valid || !passValid">Sign Up</button>
         </form>
     </div>

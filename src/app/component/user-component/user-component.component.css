@@ -1,0 +1,116 @@
+.userPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.header{
+    width: 100vw;
+    height: 75px;
+    background-color: rgb(0, 211, 173);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > img{
+    height: 90%;
+}
+
+.header > a, .header > button{
+    margin-right: 50px;
+    text-decoration: none;
+    color: rgb(0, 211, 173);
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.banner{
+    width: 90%;
+    height: 40vh;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner > img{
+    width: 100%;
+    margin-bottom: 250px;
+}
+
+.userInfo{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.userInfo > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: -50px;
+    margin-left: 25px;
+}
+
+.secciones{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.editContainer{
+    width: 50px;
+    margin: 0 5px;
+}
+
+.editButton{
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.addContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.addContainer > h2{
+    text-decoration: underline;
+}
+
+.addIcon{
+    width: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-contenido{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}

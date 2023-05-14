@@ -1,0 +1,8 @@
+<div *ngIf="active" class="popup-card">
+    <form [formGroup]="form" (ngSubmit)="send($event)">
+        <h2 (click)="active = false" class="closeCard">X</h2>
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo" formControlName="titulo" [placeholder]="seccion.titulo">
+        <button type="submit">Editar</button>
+    </form>
+</div>

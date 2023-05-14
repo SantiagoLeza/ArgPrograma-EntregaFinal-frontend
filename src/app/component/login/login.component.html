@@ -1,19 +1,18 @@
 <div class="loginView">
     <div class="loginContainer">
         <img src="../../../assets/img/portfolio.jpg" alt="porfolio">
-        <form action="#" method="post" class="loginForm">
+        <form [formGroup]="form" (ngSubmit)="onSend($event)" class="loginForm">
             <div>
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter your username">
+                <input type="email" formControlName="mail" placeholder="Enter your mail">
             </div>
             <div>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <label for="contrasenia">Password</label>
+                <input type="password" formControlName="contrasenia" placeholder="Enter your password">
             </div>
             <div>
                 <button type="submit">Login</button>
             </div>
-            <a href="#">Forgot your password?</a>
             <a href="signup">Sign Up!</a>
         </form>
     </div>

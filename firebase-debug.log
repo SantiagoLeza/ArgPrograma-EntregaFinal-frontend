@@ -1,0 +1,21 @@
+[debug] [2023-05-15T18:32:20.338Z] ----------------------------------------------------------------------
+[debug] [2023-05-15T18:32:20.340Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-15T18:32:20.341Z] CLI Version:   12.0.0
+[debug] [2023-05-15T18:32:20.341Z] Platform:      win32
+[debug] [2023-05-15T18:32:20.341Z] Node Version:  v16.13.0
+[debug] [2023-05-15T18:32:20.342Z] Time:          Mon May 15 2023 15:32:20 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-05-15T18:32:20.342Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-15T18:32:20.350Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-15T18:32:20.351Z] > authorizing via signed-in user (santu.leza79@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Santiago Leza\OneDrive\Documentos\ArgPrograma\Entrega final\Frontend\portafolio
+

@@ -1,3 +1,4 @@
+<app-loading *ngIf="isLoading()"></app-loading>
 <div class="loginView">
     <div class="loginContainer">
         <img src="../../../assets/img/portfolio.jpg" alt="porfolio">
@@ -11,7 +12,7 @@
                 <input type="password" formControlName="contrasenia" placeholder="Enter your password">
             </div>
             <div>
-                <button type="submit">Login</button>
+                <button type="submit" [disabled]="isLoading()">Login</button>
             </div>
             <a href="signup">Sign Up!</a>
         </form>

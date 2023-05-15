@@ -19,6 +19,7 @@ export class UserComponentComponent implements OnInit {
 
     sectionEdited: number | null = null;
     contentAdding: number | null = null;
+    contentEdited: number | null = null;
 
     constructor(private authService: AuthService, private router: Router) {
       this.loaded = false;
@@ -71,5 +72,19 @@ export class UserComponentComponent implements OnInit {
 
     isAddingContent(){
       console.log( this.addingContent);
+    }
+
+    async deleteSection(id: number) {
+      (await this.authService.deleteSection(id)).subscribe(res => {
+        window.location.reload();
+      });
+      this.fetchUser();
+    }
+
+    async deleteContent(id: number) {
+      (await this.authService.deleteContent(id)).subscribe(res => {
+        window.location.reload();
+      });
+      this.fetchUser();
     }
 }

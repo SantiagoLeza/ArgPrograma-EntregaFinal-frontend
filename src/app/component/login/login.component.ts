@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class LoginComponent {
   form: FormGroup;
+  loading: boolean = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private authService: AuthService) {
     this.form = this.fb.group({
@@ -18,11 +19,18 @@ export class LoginComponent {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loading = false;
+  }
 
   onSend(event: Event) {
+    this.loading = true;
     event.preventDefault();
-    
     this.authService.login(this.form.value.mail, this.form.value.contrasenia);
+    this.loading = false;
+  }
+
+  isLoading() {
+    return this.loading;
   }
 }

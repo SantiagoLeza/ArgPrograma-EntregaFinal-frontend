@@ -114,3 +114,9 @@
     height: 200px;
     margin: 10px;
 }
+
+.deleteIcon{
+    width: 50px;
+    border: none;
+    cursor: pointer;
+}

@@ -13,6 +13,7 @@ import { PopupCardComponent } from './component/user-component/popup-card/popup-
 import { PopupEditSectionComponent } from './component/user-component/popup-edit-section/popup-edit-section.component';
 import { PopupAddContentComponent } from './component/user-component/popup-add-content/popup-add-content.component';
 import { PopupEditContentComponent } from './component/user-component/popup-edit-content/popup-edit-content.component';
+import { LoadingComponent } from './component/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PopupEditContentComponent } from './component/user-component/popup-edit
     PopupCardComponent,
     PopupEditSectionComponent,
     PopupAddContentComponent,
-    PopupEditContentComponent
+    PopupEditContentComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

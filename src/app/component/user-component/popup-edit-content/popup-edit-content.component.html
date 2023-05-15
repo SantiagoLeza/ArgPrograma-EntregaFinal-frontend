@@ -1,1 +1,12 @@
-<p>popup-edit-content works!</p>
+<div *ngIf="active" class="popup-card">
+    <form [formGroup]="form" (ngSubmit)="send($event)">
+        <h2 (click)="active = false" class="closeCard">X</h2>
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo" formControlName="titulo" [placeholder]=content.titulo>
+        <label for="texto">Texto</label>
+        <input type="text" name="texto" id="texto" formControlName="texto" [placeholder]=content.texto>
+        <label for="url_imagen">Url Imagen</label>
+        <input type="text" name="url_imagen" id="url_imagen" formControlName="url_imagen" [placeholder]=content.url_imagen>
+        <button type="submit">Agregar</button>
+    </form>
+</div>

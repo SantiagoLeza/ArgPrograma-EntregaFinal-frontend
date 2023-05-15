@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  // api = 'https://portafolio-argentina-programa-springboot.onrender.com'
-  api = "http://192.168.0.10:8080"
+  api = 'https://portafolio-argentina-programa-springboot.onrender.com'
+  //api = "http://192.168.0.10:8080"
 
   constructor(private http: HttpClient, private router: Router) { }
 
   login(mail: string, contrasenia: string) {
-    this.http.post(`${this.api}/usuarios/login`, {mail: mail, contrasenia: contrasenia})
+    this.http.post(`${this.api}/usuarios/login`, { mail: mail, contrasenia: contrasenia })
       .subscribe((res: any) => {
         localStorage.setItem('userLogged', res);
         localStorage.setItem('mailLogged', res.mail);
@@ -69,6 +69,18 @@ export class AuthService {
       .subscribe((res: any) => {
       }
     );
+  }
+
+  editContent(id: number, titulo: string, texto: string, url_imagen: string | null){
+    return this.http.put<any>(`${this.api}/contenido/editar/${id}?titulo=${titulo}&texto=${texto}&urlImagen=${url_imagen}`, {titulo, texto, url_imagen});
+  }
+
+  async deleteSection(id: number) {
+    return this.http.delete<any>(`${this.api}/seccion/borrar/${id}`);
+  }
+
+  async deleteContent(id: number) {
+    return this.http.delete<any>(`${this.api}/contenido/eliminar/${id}`);
   }
   
 }

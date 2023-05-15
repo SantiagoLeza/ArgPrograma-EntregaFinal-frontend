@@ -28,12 +28,15 @@
                 <h2>{{sec.titulo}}</h2>
                 <img (click)="sectionEdited = sec.id" src="../../../assets/img/edit.png" alt="edit section" class="editButton" *ngIf="isAuthor()">
                 <img (click)="contentAdding = sec.id" src="../../../assets/img/plus.png" alt="Add content" class="addIcon" *ngIf="isAuthor()">
+                <img (click)="deleteSection(sec.id)" *ngIf="isAuthor()" src="../../../assets/img/delete.png" alt="Delete section" class="deleteIcon">
             </div>
             <div *ngFor="let cont of sec?.contenidos">
+                <app-popup-edit-content [active]="contentEdited == cont.idContenido" [content]="cont"/>
                 <hr>
                 <div style="display: flex; flex-direction: row;">
                     <h3>{{cont.titulo}}</h3>
-                    <img src="../../../assets/img/edit.png" alt="edit content" class="editButton" *ngIf="isAuthor()">
+                    <img src="../../../assets/img/edit.png" alt="edit content" class="editButton" (click)="contentEdited = cont.idContenido" *ngIf="isAuthor()">
+                    <img src="../../../assets/img/delete.png" alt="Delete content" class="deleteIcon" (click)="deleteContent(cont.idContenido)" *ngIf="isAuthor()">
                 </div>
                 <p>{{cont.texto}}</p>
                 <div *ngIf="cont.urlImagen != undefined && cont.urlImagen != null && cont.urlImagen != ''">
